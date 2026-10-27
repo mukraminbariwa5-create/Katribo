@@ -2,14 +2,18 @@
   "name": "katribo",
   "private": true,
   "version": "1.0.0",
-  "description": "KATRIBO — Welcome to Our Backyard. Coffee shop website built with React, TypeScript, Vite and Tailwind CSS.",
+  "description": "KATRIBO \u2014 Welcome to Our Backyard. Coffee shop website built with React, TypeScript, Vite and Tailwind CSS.",
   "type": "module",
   "author": "Mukramin Bariwa Ansao",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:server": "vite build && vite build --ssr shared/order.ts --outDir dist-server",
+    "start": "node server.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "check:images": "node scripts/check-images.mjs"

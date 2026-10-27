@@ -34,6 +34,15 @@ npm run check:images   # which drink photos still need high-res versions
 3. Netlify reads `netlify.toml` automatically: build command `npm run build`, publish folder `dist`. Click **Deploy**.
 4. Every push to `main` redeploys the site.
 
+## Deploy on Render (free)
+
+The repo also runs as a Node web service (`server.mjs`, zero dependencies), so checkout works on Render too:
+
+- **Build command:** `npm ci --include=dev && npm run build:server`
+- **Start command:** `npm start`
+
+`render.yaml` has these settings, so **New → Blueprint** on Render picks them up. Every push to `main` redeploys. On the free plan the site sleeps when idle and the first visit can take about a minute.
+
 ## Project structure
 
 ```
